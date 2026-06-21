@@ -8,8 +8,7 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{font-size:16px;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:#f4f6f8;color:#1a1a2e;line-height:1.5;padding:0 0 2rem;-webkit-font-smoothing:antialiased}
-button,input,select{font:inherit;border:none;outline:none;background:none;color:inherit}
-button{cursor:pointer}
+button,input,select{font:inherit;border:none;outline:none;background:none;color:inherit}button{cursor:pointer}
 .app{max-width:480px;margin:0 auto;padding:0 .75rem}
 .header{background:#fff;border-radius:16px;margin:.75rem 0;padding:1rem 1.125rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .date-row{display:flex;align-items:baseline;gap:.5rem}
@@ -21,38 +20,46 @@ button{cursor:pointer}
 .progress-wrap{margin-top:.75rem}
 .progress-text{font-size:.82rem;color:#6b7280;margin-bottom:.35rem}
 .progress-track{height:5px;background:#e5e7eb;border-radius:99px;overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);border-radius:99px;transition:width .4s ease;width:0%}.week-progress-wrap{margin-top:.5rem}.week-progress-wrap .progress-text{font-size:.75rem;color:#8e8ea0}.week-progress-wrap .week-fill{background:linear-gradient(90deg,#3b82f6,#2563eb)}
+.progress-fill{height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);border-radius:99px;transition:width .4s ease;width:0%}
+.week-progress-wrap{margin-top:.5rem}
+.week-progress-wrap .progress-text{font-size:.75rem;color:#8e8ea0}
+.week-progress-wrap .week-fill{background:linear-gradient(90deg,#3b82f6,#2563eb)}
 .habit-card{background:#fff;border-radius:16px;margin:.75rem 0;padding:1rem 1rem .6rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .habit-card-title{font-size:.8rem;color:#8e8ea0;margin-bottom:.4rem;font-weight:500}
-.htable{display:grid;grid-template-columns:24px 1fr 48px 48px 52px;gap:3px 6px;align-items:center}
+.htable{display:grid;grid-template-columns:24px 1fr 48px 48px 42px 24px;gap:3px 4px;align-items:center}
 .htable-hdr{display:contents}
 .htable-hdr>div{padding:.3rem 0 .2rem;font-size:.72rem;color:#9ca3af;font-weight:500;border-bottom:1px solid #f0f0f0;text-align:center}
 .htable-hdr>div:first-child,.htable-hdr>div:nth-child(2){text-align:left;padding-left:2px}
 .hrow{display:contents}
-.hrow>div{padding:.4rem 0;display:flex;align-items:center;min-height:44px}
+.hrow>div{padding:.4rem 0;display:flex;align-items:center;min-height:40px}
 .hrow>div:first-child{justify-content:center}
 .hrow>div:nth-child(3),.hrow>div:nth-child(4){justify-content:center;font-size:.82rem;color:#6b7280;cursor:pointer;border-radius:6px;padding:.15rem 0;transition:background .12s}
 .hrow>div:nth-child(3):active,.hrow>div:nth-child(4):active{background:#f3f4f6}
-.hrow>div:last-child{justify-content:flex-end;gap:2px}
-.habit-check{width:20px;height:20px;border-radius:50%;border:2px solid #d1d5db;display:flex;align-items:center;justify-content:center;transition:all .2s;cursor:pointer;flex-shrink:0}
-.habit-check.done{border-color:#22c55e;background:#22c55e}
-.habit-check.done::after{content:"";display:block;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-1px)}
-.habit-check:not(.done):active{border-color:#9ca3af}
-.hrow .hname{font-size:.95rem;padding:.15rem .25rem .15rem 4px;word-break:break-word;line-height:1.3}
-.hrow .hname.done{color:#9ca3af;text-decoration:line-through}
-.hrow .hact button{width:26px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.78rem;color:#8e8ea0;transition:all .12s}
+.hrow>div:nth-child(5){justify-content:center;font-size:.62rem;color:#b0b0c0}
+.hrow>div:last-child{justify-content:center;gap:1px}
+.hrow .hact button{width:22px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#8e8ea0;transition:all .12s}
 .hrow .hact button:active{background:#f3f4f6;color:#4b5563}
 .hrow .hact .btn-del:active{color:#ef4444;background:#fef2f2}
+.habit-check{width:18px;height:18px;border-radius:50%;border:2px solid #d1d5db;display:flex;align-items:center;justify-content:center;transition:all .2s;cursor:pointer;flex-shrink:0}
+.habit-check.done{border-color:#22c55e;background:#22c55e}
+.habit-check.done::after{content:"";display:block;width:5px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-1px)}
+.habit-check:not(.done):active{border-color:#9ca3af}
+.hrow .hname{font-size:.88rem;padding:.1rem 2px;word-break:break-word;line-height:1.3}
+.hrow .hname.done{color:#9ca3af;text-decoration:line-through}
 .habit-empty{grid-column:1/-1;padding:1.5rem 0;text-align:center;color:#9ca3af;font-size:.9rem}
-.add-habit{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.3rem;padding:.65rem 0 .4rem;border-top:1px solid #f0f0f0}
-.add-habit .ainp{flex:1 1 120px;min-width:0;padding:.5rem .65rem;border-radius:8px;background:#f4f6f8;font-size:.9rem;transition:background .15s}
+.day-toggles{display:flex;gap:3px;margin-top:.35rem;flex-wrap:wrap;align-items:center}
+.day-toggles .dt-label{font-size:.7rem;color:#b0b0b0;margin-right:4px}
+.day-btn{width:26px;height:26px;border-radius:6px;font-size:.72rem;font-weight:600;transition:all .12s;color:#9ca3af;background:#f3f4f6}
+.day-btn.on{color:#fff;background:#22c55e}.day-btn:active{opacity:.7}
+.add-habit{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.3rem;padding:.55rem 0 .3rem;border-top:1px solid #f0f0f0}
+.add-habit .ainp{flex:1 1 100px;min-width:0;padding:.45rem .6rem;border-radius:8px;background:#f4f6f8;font-size:.85rem;transition:background .15s}
 .add-habit .ainp:focus{background:#e8eaed}.add-habit .ainp::placeholder{color:#b0b0c0}
-.add-habit .atime{width:80px;padding:.5rem .4rem;border-radius:8px;background:#f4f6f8;font-size:.82rem;text-align:center;transition:background .15s;color:#4b5563;flex:0 0 auto}
-.add-habit .atime::-webkit-calendar-picker-indicator{opacity:.45;margin-left:2px}
+.add-habit .atime{width:70px;padding:.45rem .3rem;border-radius:8px;background:#f4f6f8;font-size:.78rem;text-align:center;transition:background .15s;color:#4b5563;flex:0 0 auto}
+.add-habit .atime::-webkit-calendar-picker-indicator{opacity:.4;margin-left:1px}
 .add-habit .atime:focus{background:#e8eaed}
-.add-habit .btn-add{padding:.5rem .9rem;border-radius:8px;background:#22c55e;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;transition:background .15s}
+.add-habit .btn-add{padding:.45rem .8rem;border-radius:8px;background:#22c55e;color:#fff;font-size:.82rem;font-weight:600;white-space:nowrap;transition:background .15s;flex:0 0 auto}
 .add-habit .btn-add:active{background:#16a34a}.add-habit .btn-add:disabled{opacity:.4;cursor:default}
-@media(max-width:400px){.htable{grid-template-columns:24px 1fr 44px 44px 46px;gap:3px 4px}.hrow>div:nth-child(3),.hrow>div:nth-child(4){font-size:.75rem}.add-habit .atime{width:72px;font-size:.78rem}}
+@media(max-width:400px){.htable{grid-template-columns:20px 1fr 42px 42px 36px 20px;gap:2px 3px}.hrow>div:nth-child(3),.hrow>div:nth-child(4){font-size:.72rem}.day-btn{width:23px;height:23px;font-size:.68rem}}
 .calendar-card{background:#fff;border-radius:16px;margin:.75rem 0;padding:1rem 1rem .75rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .calendar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem}
 .calendar-nav{display:flex;align-items:center;gap:.25rem}
@@ -74,17 +81,14 @@ button{cursor:pointer}
 .cal-legend .swatch{width:12px;height:12px;border-radius:3px;display:inline-block}
 .cal-legend .swatch.s0{background:#f3f4f6}.cal-legend .swatch.s3{background:#86efac}.cal-legend .swatch.s5{background:#22c55e}
 @media(min-width:481px){.app{padding:0 1rem}.header,.habit-card,.calendar-card{border-radius:20px;padding:1.25rem 1.5rem}.habit-card{padding-bottom:.6rem}}
-@media(max-width:360px){.date-day{font-size:1.25rem}.htable{grid-template-columns:20px 1fr 38px 38px 40px;gap:2px}.hrow>div:nth-child(3),.hrow>div:nth-child(4){font-size:.7rem}.cal-day{font-size:.78rem;min-height:32px}}
+@media(max-width:360px){.date-day{font-size:1.25rem}.htable{grid-template-columns:18px 1fr 36px 36px 30px 18px;gap:1px 2px}.hrow>div:nth-child(5){font-size:.58rem}.cal-day{font-size:.78rem;min-height:32px}}
 .progress-fill,.cal-day{will-change:transform}
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-.hrow{animation:fadeIn .25s ease both}
-.hrow:nth-child(2){animation-delay:0ms}.hrow:nth-child(3){animation-delay:40ms}.hrow:nth-child(4){animation-delay:80ms}
-.hrow:nth-child(5){animation-delay:120ms}.hrow:nth-child(6){animation-delay:160ms}.hrow:nth-child(7){animation-delay:200ms}
-.hrow:nth-child(8){animation-delay:240ms}.hrow:nth-child(9){animation-delay:280ms}.hrow:nth-child(10){animation-delay:320ms}
-.hrow:nth-child(11){animation-delay:360ms}.hrow:nth-child(12){animation-delay:400ms}
-.hrow:nth-child(13){animation-delay:440ms}.hrow:nth-child(14){animation-delay:480ms}
-.hrow:nth-child(15){animation-delay:520ms}.hrow:nth-child(16){animation-delay:560ms}
-.hrow:nth-child(15){animation-delay:520ms}.hrow:nth-child(16){animation-delay:560ms}
+.hrow{animation:fadeIn .2s ease both}
+.hrow:nth-child(2){animation-delay:0ms}.hrow:nth-child(3){animation-delay:30ms}.hrow:nth-child(4){animation-delay:60ms}
+.hrow:nth-child(5){animation-delay:90ms}.hrow:nth-child(6){animation-delay:120ms}.hrow:nth-child(7){animation-delay:150ms}
+.hrow:nth-child(8){animation-delay:180ms}.hrow:nth-child(9){animation-delay:210ms}.hrow:nth-child(10){animation-delay:240ms}
+.hrow:nth-child(11){animation-delay:270ms}.hrow:nth-child(12){animation-delay:300ms}
 @media(min-width:640px){.app{max-width:720px;display:grid;grid-template-columns:1fr 280px;gap:0 .75rem;align-items:start}.header{grid-column:1/-1}.habit-card{grid-column:1;margin-top:0}.calendar-card{grid-column:2;margin-top:0;position:sticky;top:.75rem}}
 </style>
 </head>
@@ -103,29 +107,35 @@ button{cursor:pointer}
       <div class="progress-text" id="progressText">今日完成 0/0</div>
       <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
     </div>
-      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-    </div>
     <div class="week-progress-wrap" id="weekProgressWrap">
       <div class="progress-text" id="weekProgressText">本周完成 0/0</div>
       <div class="progress-track"><div class="progress-fill week-fill" id="weekProgressFill"></div></div>
     </div>
   </header>
   <section class="habit-card">
-    <div class="habit-card-title">📌 打卡清单</div>
-    <div class="htable" id="habitTable">
-      <!-- header + rows rendered by JS -->
-    </div>
+    <div class="habit-card-title" id="todayLabel">📌 今日课程</div>
+    <div class="htable" id="habitTable"></div>
     <div class="add-habit" id="addHabitForm">
-      <input class="ainp" id="habitInput" placeholder="习惯名称" maxlength="20" autocomplete="off">
+      <input class="ainp" id="habitInput" placeholder="科目名称" maxlength="20" autocomplete="off">
       <input class="atime" id="startInput" type="time" value="08:00">
-      <input class="atime" id="endInput" type="time" value="21:00">
+      <input class="atime" id="endInput" type="time" value="08:40">
       <button class="btn-add" id="btnAdd" disabled>添加</button>
+    </div>
+    <div class="day-toggles" id="dayToggles">
+      <span class="dt-label">日</span>
+      <button class="day-btn on" data-d="1">一</button>
+      <button class="day-btn on" data-d="2">二</button>
+      <button class="day-btn on" data-d="3">三</button>
+      <button class="day-btn on" data-d="4">四</button>
+      <button class="day-btn on" data-d="5">五</button>
+      <button class="day-btn" data-d="6">六</button>
+      <button class="day-btn" data-d="7">日</button>
     </div>
   </section>
   <section class="calendar-card">
     <div class="calendar-header">
       <div class="calendar-nav">
-        <button id="prevMonth">‹</button>
+        <button id="prevMonth">&lsaquo;</button>
         <span class="calendar-title" id="calendarTitle"></span>
         <button id="nextMonth">›</button>
       </div>
@@ -139,36 +149,38 @@ button{cursor:pointer}
     </div>
   </section>
 </div>
-<script>
-const STORAGE_KEY='habit-tracker-data';let data={habits:[],records:{}};
-function load(){try{const r=localStorage.getItem(STORAGE_KEY);if(r){const p=JSON.parse(r);data.habits=Array.isArray(p.habits)?p.habits:[];data.records=p.records&&typeof p.records==='object'?p.records:{}}}catch(e){data={habits:[],records:{}}}data.habits=data.habits.filter(h=>h&&h.id&&h.name).map(h=>{if(!h.planStart)h.planStart='08:00';if(!h.planEnd)h.planEnd='21:00';return h})}
-function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(data))}
+<script>const STORAGE_KEY='habit-tracker-data';const DLAB=['','一','二','三','四','五','六','日'];let data={habits:[],records:{}};
+function load(){try{const r=localStorage.getItem(STORAGE_KEY);if(r){const p=JSON.parse(r);if(!p._ver||p._ver<4){data={habits:[],records:{}};return}data.habits=Array.isArray(p.habits)?p.habits:[];data.records=p.records&&typeof p.records==='object'?p.records:{}}data.habits=data.habits.filter(h=>h&&h.id&&h.name).map(h=>{if(!h.planStart)h.planStart='08:00';if(!h.planEnd)h.planEnd='21:00';return h})}catch(e){data={habits:[],records:{}}}}
+function save(){data._ver=4;localStorage.setItem(STORAGE_KEY,JSON.stringify(data))}
 function id$(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
 const WD=['日','一','二','三','四','五','六'],MO=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
 function p2(n){return String(n).padStart(2,'0')}
 function fd(d){return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())}
 function pd(s){const p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
 function ft(s){return s>fd(new Date())}
-function sd(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
+function dw(ds){const d=new Date(ds+'T12:00');return d.getDay()===0?7:d.getDay()}
+function dl(ds){return DLAB[dw(ds)]}
 let vd=null,cy,cm;
 function gV(){return vd||new Date()}function gVS(){return fd(gV())}
 function rst(){vd=null;const t=new Date();cy=t.getFullYear();cm=t.getMonth();R()}
-function gh(ds){return data.habits.filter(h=>h.createdAt<=ds)}
-function addH(n,s,e){n=n.trim();if(!n)return;const now=fd(new Date());data.habits.push({id:id$(),name:n,planStart:s||'08:00',planEnd:e||'21:00',createdAt:now});save();R()}
+function gh(ds){const dow=dw(ds);return data.habits.filter(h=>!h.days||!h.days.length||h.days.includes(dow))}
+const SCHED=[['升旗仪式','07:40','08:00',[1]],['生物早读','07:50','08:00',[5,6]],['英语早读','07:50','08:00',[1,3]],['语文早读','07:50','08:00',[2,4]],['数学','08:00','08:40',[2,5]],['英语','08:00','08:40',[1,3]],['语文','08:00','08:40',[4,6]],['化学','08:50','09:30',[3]],['数学','08:50','09:30',[5]],['物理','08:50','09:30',[2]],['语文','08:50','09:30',[1,4,6]],['数学','09:40','10:20',[6]],['物理','09:40','10:20',[4]],['生物','09:40','10:20',[1,3]],['英语','09:40','10:20',[2,5]],['化学','10:30','11:10',[4,5]],['数学','10:30','11:10',[6]],['物理','10:30','11:10',[1]],['英语','10:30','11:10',[2]],['语文','10:30','11:10',[3]],['体育','11:20','12:00',[1]],['数学','11:20','12:00',[4]],['自习','11:20','12:00',[5]],['通技/自习','11:20','12:00',[2]],['错整','11:20','12:00',[6]],['阅读','11:20','12:00',[3]],['数学','14:05','14:45',[1,3,6]],['物理','14:05','14:45',[5]],['生物','14:05','14:45',[2]],['英语','14:05','14:45',[4]],['体育','15:10','15:50',[3]],['数学','15:10','15:50',[1]],['生物','15:10','15:50',[4,5,6]],['语文','15:10','15:50',[2]],['健康/信息','16:00','16:40',[1]],['化学','16:00','16:40',[2,6]],['物理','16:00','16:40',[3]],['社团','16:00','16:40',[4]],['语文','16:00','16:40',[5]],['化学','16:50','17:30',[1,6]],['物理','16:50','17:30',[3]],['班会','16:50','17:30',[5]],['社团','16:50','17:30',[4]],['艺体','16:50','17:30',[2]],['化/英晚','18:10','19:40',[5]],['数/生晚','18:10','19:40',[3]],['物理晚','18:10','19:40',[1]],['英/数晚','18:10','19:40',[4]],['语文晚','18:10','19:40',[2]],['运动','19:40','20:00',[1,2,3,4,5]],['晚自习','20:00','21:40',[1,2,3,4,5]]];
+function addH(n,s,e,days){n=n.trim();if(!n)return;const now=fd(new Date());data.habits.push({id:id$(),name:n,planStart:s||'08:00',planEnd:e||'21:00',days:days||[],createdAt:now});save();R()}
 function delH(id){data.habits=data.habits.filter(h=>h.id!==id);Object.keys(data.records).forEach(ds=>{Object.keys(data.records[ds]).forEach(hid=>{if(!data.habits.some(h=>h.id===hid))delete data.records[ds][hid]});if(Object.keys(data.records[ds]).length===0)delete data.records[ds]});save();R()}
 function editN(id){const h=data.habits.find(h=>h.id===id);if(!h)return;const n=prompt('修改习惯名称：',h.name);if(n&&n.trim()&&n.trim()!==h.name){h.name=n.trim();save();R()}}
 function editT(id,which){const h=data.habits.find(h=>h.id===id);if(!h)return;const cur=which==='s'?h.planStart:h.planEnd;const v=prompt(which==='s'?'修改计划开始时间 (HH:MM)：':'修改计划结束时间 (HH:MM)：',cur);if(v&&/^\d{2}:\d{2}$/.test(v.trim())){if(which==='s')h.planStart=v.trim();else h.planEnd=v.trim();save();R()}}
-function tog(hid,ds){if(!data.records[ds])data.records[ds]={};const r=data.records[ds];if(r[hid]){delete r[hid]}else{r[hid]=true}if(Object.keys(r).length===0)delete data.records[ds];save();R()}
+function toggleH(hid,ds){if(!data.records[ds])data.records[ds]={};const r=data.records[ds];if(r[hid]){delete r[hid]}else{r[hid]=true}if(Object.keys(r).length===0)delete data.records[ds];save();R()}
 function isD(hid,ds){return !!(data.records[ds]&&data.records[ds][hid])}
 function cp(ds){const h=gh(ds),t=h.length;if(!t)return{d:0,t:0,p:0};let d=0;h.forEach(h=>{if(isD(h.id,ds))d++});return{d,t,p:Math.round(d/t*100)}}
 function cwp(){const t=new Date(),d=t.getDay(),m=new Date(t);m.setDate(t.getDate()-(d===0?6:d-1));let dn=0,tl=0;for(let x=new Date(m);x<=t;x.setDate(x.getDate()+1)){const ds=fd(x),p=cp(ds);dn+=p.d;tl+=p.t}return{d:dn,t:tl,p:tl>0?Math.round(dn/tl*100):0}}
 let _rs=false;function R(){if(_rs)return;_rs=true;requestAnimationFrame(()=>{_rs=false;rHdr();rHabits();rCal()})}
 function rHdr(){const d=gV(),ds=fd(d),ts=fd(new Date());document.getElementById('dateDay').textContent=(d.getMonth()+1)+'月'+d.getDate()+'日';document.getElementById('dateSub').innerHTML='<span>'+d.getFullYear()+'年</span><span>星期'+WD[d.getDay()]+'</span>';const bn=document.getElementById('viewingBanner'),lb=document.getElementById('viewingLabel');if(ds===ts){bn.classList.remove('show')}else{bn.classList.add('show');lb.textContent='正在查看 '+(d.getMonth()+1)+'月'+d.getDate()+'日'}const p=cp(ds),wr=document.getElementById('progressWrap');wr.style.display='';document.getElementById('progressText').textContent=(ds===ts?'今日':ft(ds)?'计划':'当日')+'完成 '+p.d+'/'+p.t;document.getElementById('progressFill').style.width=p.p+'%';const wp=cwp();document.getElementById('weekProgressText').textContent='本周完成 '+wp.d+'/'+wp.t;document.getElementById('weekProgressFill').style.width=wp.p+'%'}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-function rHabits(){const ds=gVS(),tb=document.getElementById('habitTable'),habs=gh(ds);if(!habs.length){tb.innerHTML='<div class="htable-hdr"><div></div><div>名称</div><div>开始</div><div>结束</div><div></div></div><div class="habit-empty">还没有习惯，在上面添加吧 ✨</div>';return}let html='<div class="htable-hdr"><div></div><div>名称</div><div>开始</div><div>结束</div><div></div></div>';habs.forEach(h=>{const done=isD(h.id,ds);const sCls='habit-check'+(done?' done':'');const nCls='hname'+(done?' done':'');html+='<div class="hrow" data-id="'+h.id+'"><div><div class="'+sCls+'" data-a="tog"></div></div><div class="'+nCls+'">'+esc(h.name)+'</div><div data-a="es" data-w="s">'+h.planStart+'</div><div data-a="ee" data-w="e">'+h.planEnd+'</div><div class="hact"><button data-a="ed" aria-label="编辑">&#9998;</button><button class="btn-del" data-a="del" aria-label="删除">&#10005;</button></div></div>'});tb.innerHTML=html;tb.addEventListener('click',function(e){const row=e.target.closest('.hrow');if(!row)return;const id=row.dataset.id,a=e.target.dataset.a||(e.target.closest('[data-a]')?e.target.closest('[data-a]').dataset.a:null);if(!a)return;if(a==='tog'){tog(id,ds)}else if(a==='ed'){editN(id)}else if(a==='del'){if(confirm('确定删除这个习惯吗？'))delH(id)}else if(a==='es'){editT(id,'s')}else if(a==='ee'){editT(id,'e')}},{once:false})}
+function rHabits(){const ds=gVS(),dow=dw(ds),tb=document.getElementById('habitTable'),habs=gh(ds);document.getElementById('todayLabel').textContent='📌 星期'+DLAB[dow]+'课程';if(!habs.length){tb.innerHTML='<div class="htable-hdr"><div></div><div>科目</div><div>开始</div><div>结束</div><div>日</div><div></div></div><div class="habit-empty">今天没有安排课程 ✨</div>';return}let html='<div class="htable-hdr"><div></div><div>科目</div><div>开始</div><div>结束</div><div>日</div><div></div></div>';habs.forEach(h=>{const done=isD(h.id,ds);const daysStr=h.days&&h.days.length?h.days.map(d=>DLAB[d]).join(''):'每日';html+='<div class="hrow" data-id="'+h.id+'"><div><div class="habit-check'+(done?' done':'')+'" data-a="t"></div></div><div class="hname'+(done?' done':'')+'">'+esc(h.name)+'</div><div data-a="es" data-w="s">'+h.planStart+'</div><div data-a="ee" data-w="e">'+h.planEnd+'</div><div style="font-size:.62rem;color:#b0b0c0;text-align:center">'+daysStr+'</div><div class="hact"><button data-a="ed">✎</button><button class="btn-del" data-a="de">✕</button></div></div>'});tb.innerHTML=html;tb.addEventListener('click',function(e){const row=e.target.closest('.hrow');if(!row)return;const id=row.dataset.id,a=e.target.dataset.a||(e.target.closest('[data-a]')?e.target.closest('[data-a]').dataset.a:null);if(!a)return;if(a==='t'){toggleH(id,ds)}else if(a==='ed'){editN(id)}else if(a==='de'){if(confirm('删除这个课程安排？'))delH(id)}else if(a==='es'){editT(id,'s')}else if(a==='ee'){editT(id,'e')}},{once:false})}
 function rCal(){const t=new Date();if(cy===undefined||cm===undefined){const v=gV();cy=v.getFullYear();cm=v.getMonth()}document.getElementById('calendarTitle').textContent=MO[cm]+' '+cy;const bCT=document.getElementById('btnCalendarToday');if(cy===t.getFullYear()&&cm===t.getMonth()){bCT.classList.add('hide')}else{bCT.classList.remove('hide')}const grid=document.getElementById('calendarGrid'),fd0=new Date(cy,cm,1).getDay(),dim=new Date(cy,cm+1,0).getDate(),ts=fd(t),vs=gVS();let html='';WD.forEach(w=>{html+='<div class="cal-weekday">'+w+'</div>'});for(let i=0;i<fd0;i++){html+='<div class="cal-day other-month"></div>'}for(let d=1;d<=dim;d++){const dobj=new Date(cy,cm,d),ds=fd(dobj),isT=ds===ts,isF=ds>ts,isS=ds===vs,vh=gh(ds),hh=vh.length>0;let lv=-1;if(hh){const p=cp(ds);if(p.t>0){const r=p.d/p.t;if(r===0)lv=0;else if(r<0.3)lv=1;else if(r<0.6)lv=2;else if(r<0.9)lv=3;else if(r<1)lv=4;else lv=5}}const cls=['cal-day'];if(isT)cls.push('today');if(isF)cls.push('future');if(isS)cls.push('selected');if(hh)cls.push('has-habits');if(lv>=0)cls.push('lv-'+lv);html+='<div class="'+cls.join(' ')+'" data-date="'+ds+'">'+d+'</div>'}grid.innerHTML=html;grid.addEventListener('click',function(e){const cell=e.target.closest('.cal-day');if(!cell||cell.classList.contains('other-month'))return;const ds=cell.dataset.date;if(!ds)return;vd=pd(ds);R()},{once:false})}
-function init(){load();if(!data.habits.length){const n=fd(new Date());data.habits=[{id:id$(),name:'喝水',planStart:'08:00',planEnd:'22:00',createdAt:n},{id:id$(),name:'运动',planStart:'17:00',planEnd:'17:30',createdAt:n},{id:id$(),name:'数学',planStart:'19:00',planEnd:'21:00',createdAt:n},{id:id$(),name:'英语',planStart:'07:00',planEnd:'07:30',createdAt:n}];save()}const t=new Date();cy=t.getFullYear();cm=t.getMonth();const inp=document.getElementById('habitInput'),st=document.getElementById('startInput'),en=document.getElementById('endInput'),btn=document.getElementById('btnAdd');function chk(){btn.disabled=!inp.value.trim()}inp.addEventListener('input',chk);inp.addEventListener('keydown',e=>{if(e.key==='Enter'&&inp.value.trim()){addH(inp.value,st.value,en.value);inp.value='';btn.disabled=true;inp.focus()}});btn.addEventListener('click',()=>{if(inp.value.trim()){addH(inp.value,st.value,en.value);inp.value='';btn.disabled=true;inp.focus()}});document.getElementById('prevMonth').addEventListener('click',()=>{cm--;if(cm<0){cm=11;cy--}R()});document.getElementById('nextMonth').addEventListener('click',()=>{cm++;if(cm>11){cm=0;cy++}R()});document.getElementById('btnCalendarToday').addEventListener('click',()=>{const t=new Date();cy=t.getFullYear();cm=t.getMonth();R()});document.getElementById('btnBackToday').addEventListener('click',rst);R()}
-document.addEventListener('DOMContentLoaded',init)
-</script>
+const selDays=[1,2,3,4,5];
+function toggleDay(d){const i=selDays.indexOf(d);if(i>=0)selDays.splice(i,1);else selDays.push(d);selDays.sort();document.querySelectorAll('.day-btn').forEach(b=>{b.classList.toggle('on',selDays.includes(+b.dataset.d))})}
+function init(){load();if(!data.habits.length){const n=fd(new Date());SCHED.forEach(h=>{data.habits.push({id:id$(),name:h[0],planStart:h[1],planEnd:h[2],days:h[3],createdAt:n})});save()}const t=new Date();cy=t.getFullYear();cm=t.getMonth();const inp=document.getElementById('habitInput'),st=document.getElementById('startInput'),en=document.getElementById('endInput'),btn=document.getElementById('btnAdd');function chk(){btn.disabled=!inp.value.trim()}inp.addEventListener('input',chk);document.querySelectorAll('.day-btn').forEach(b=>b.addEventListener('click',()=>toggleDay(+b.dataset.d)));inp.addEventListener('keydown',e=>{if(e.key==='Enter'&&inp.value.trim()){addH(inp.value,st.value,en.value,selDays);inp.value='';btn.disabled=true;inp.focus()}});btn.addEventListener('click',()=>{if(inp.value.trim()){addH(inp.value,st.value,en.value,selDays);inp.value='';btn.disabled=true;inp.focus()}});document.getElementById('prevMonth').addEventListener('click',()=>{cm--;if(cm<0){cm=11;cy--}R()});document.getElementById('nextMonth').addEventListener('click',()=>{cm++;if(cm>11){cm=0;cy++}R()});document.getElementById('btnCalendarToday').addEventListener('click',()=>{const t=new Date();cy=t.getFullYear();cm=t.getMonth();R()});document.getElementById('btnBackToday').addEventListener('click',rst);R()}
+document.addEventListener('DOMContentLoaded',init)</script>
 </body>
 </html>
